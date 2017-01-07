@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#app {
+  display: flex;
+}
+
+#drop-zone-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+}
+
+#result-container {
+  display: flex;
+  width: 75vw;
+}
+
+.dropzone {
+  display: flex;
+  height: 50vh;
+  width: 100%;
+  border: 2px dashed lightgray;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.dropzone:hover, .dropzone-active {
+  border: 2px dashed lightblue;
+  background-color: #effbff;
+  transition: all 300ms linear;
+}
+
+.dropzone-instructions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dropzone img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.drop-icon {
+  fill: darkgray;
+  stroke: darkgray;
+  height: 15%;
+  transition: all 300ms ease-in-out;
+}
+
+.dropzone-active .drop-icon {
+  animation: wiggle 1s ease-in-out;
+  height: 25%;
+  transition: all 300ms ease-in-out;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkgray;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1em;
+  width: 100%;
+}
+
+@keyframes wiggle {
+  20%, 60% {
+    transform: rotate(10deg);
+  }
+  40%, 80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
