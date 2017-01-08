@@ -4,7 +4,7 @@ import DropZoneInstructions from './DropZoneInstructions'
 
 const ImageDropZone = ({ title, image, onDrop }) => (
     <DropZone className="dropzone" activeClassName="dropzone-active" onDrop={onDrop}>
-        {image ? <img src={image.preview} /> : <DropZoneInstructions title={title}/> }
+        {image.file ? <img src={image.file.preview} role="presentation" /> : <DropZoneInstructions title={title}/> }
     </DropZone>
 )
 

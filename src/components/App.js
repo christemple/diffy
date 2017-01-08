@@ -1,6 +1,7 @@
 import React from 'react'
 import BaseImage from '../containers/BaseImage'
 import ComparisonImage from '../containers/ComparisonImage'
+import Result from '../containers/Result'
 import './App.css'
 
 const App = () => (
@@ -9,8 +10,7 @@ const App = () => (
       <BaseImage/>
       <ComparisonImage/>  
     </div>
-    <div id="result-container">
-    </div>
+    <Result/>
   </div>
 )
 

@@ -2,9 +2,10 @@ import { connect } from 'react-redux'
 import { baseImageDropped } from '../actions'
 import ImageDropZone from '../components/ImageDropZone'
 
-const mapStateToProps = (state) => (
-    state.base
-)
+const mapStateToProps = (state) => {
+    console.log("BASE IMAGE MAP2PROPS", state)
+    return state.base
+}
 
 const mapDispatchToProps = (dispatch) => ({
     onDrop: (image) => {
