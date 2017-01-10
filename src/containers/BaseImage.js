@@ -3,7 +3,6 @@ import { baseImageDropped } from '../actions'
 import ImageDropZone from '../components/ImageDropZone'
 
 const mapStateToProps = (state) => {
-    console.log("BASE IMAGE MAP2PROPS", state)
     return state.base
 }
 
