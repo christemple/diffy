@@ -1,11 +1,8 @@
 import { connect } from 'react-redux'
-import { comparisonImageDropped } from '../actions'
+import { comparisonImageDropped } from '../actions/index'
 import ImageDropZone from '../components/ImageDropZone'
 
-const mapStateToProps = (state) => {
-    return state.comparison
-}
-
+const mapStateToProps = (state) => (state.comparison)
 const mapDispatchToProps = (dispatch) => ({
     onDrop: (image) => {
         dispatch(comparisonImageDropped(image))

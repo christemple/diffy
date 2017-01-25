@@ -7,7 +7,7 @@ export default class DropZoneInstructions extends React.Component {
             <div className="dropzone-instructions">
                 <DropIcon/>
                 <div className="message">
-                    Drop a {this.props.title} image here, or click and select
+                    Drop an image here, or click and select
                 </div>
             </div>
         )

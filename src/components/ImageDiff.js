@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ImageDiff = ({ image }) => (
+const ImageDiff = ({ data }) => (
     <div id="result-container">
-        <img src={image.data} role="presentation" />
+        <img src={data} role="presentation" />
     </div>
 )
 

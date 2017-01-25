@@ -5,16 +5,21 @@ import { createStore, applyMiddleware } from 'redux'
 import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
 import diffyApp from './reducers'
-import AppContainer from './containers/AppContainer'
+import App from './components/App'
+import createLogger from 'redux-logger';
 
 let store = createStore(
   diffyApp, {},
-  applyMiddleware(thunkMiddleware, promiseMiddleware())
+  applyMiddleware(
+    thunkMiddleware, 
+    promiseMiddleware(),
+    createLogger()  
+  )
 )
 
 render(
   <Provider store={store}>
-    <AppContainer />
+    <App/>
   </Provider>,
   document.getElementById('root')
 )

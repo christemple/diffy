@@ -3,26 +3,25 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-#app {
+/*#app {
   display: flex;
-}
+}*/
 
 #drop-zone-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25vw;
+  justify-content: space-around;
+  /*align-items: center;*/
+  /*width: 100vw;*/
 }
-
+/*
 #result-container {
   display: flex;
   width: 75vw;
-}
+}*/
 
 .dropzone {
   display: flex;
-  height: 50vh;
+  height: 85vh;
   width: 100%;
   border: 2px dashed lightgray;
   overflow: hidden;
@@ -73,6 +72,51 @@ body {
   font-size: 1.2em;
   padding: 1em;
   width: 100%;
+}
+
+.controls-container {
+  display: flex;
+}
+
+#controls {
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #5D9CEC;
+    color: white;
+}
+
+.control-button {
+  justify-content: space-around;
+  height: 10vh;
+  width: 10vh;
+  padding: 0.5em;
+  cursor: pointer;
+  stroke: white;
+  fill: white;
+  opacity: 0.3;
+}
+
+.control-button:hover {
+  opacity: 1;
+}
+
+.control-button.active {
+  opacity: 1;
+}
+
+.control-button.disabled:hover {
+  opacity: 0.3;
+}
+
+.control-button.disabled {
+  cursor: default;
+}
+
+.side-by-side-icon__page {
+  stroke-width: 4px;
+  fill: transparent;
 }
 
 @keyframes wiggle {
