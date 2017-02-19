@@ -1,18 +1,21 @@
 import React from 'react'
-import BaseImage from '../containers/BaseImage'
-import ComparisonImage from '../containers/ComparisonImage'
+import SideBySide from '../components/SideBySide'
+import SlideCompare from '../components/SlideCompare'
 import Result from '../containers/Result'
 import ControlsContainer from '../containers/ControlsContainer'
 import './App.css'
 
-const App = () => (
-  <div id="app">
-    <div id="drop-zone-container">
-      <BaseImage/>
-      <ComparisonImage/>
+const App = ({ base, comparison, controls }) => {
+  let view = <SideBySide/>
+  if (controls.slideCompare.active) {
+    view = <SlideCompare base={base} comparison={comparison} />
+  }
+  return (
+    <div id="app">
+      {view}
+      <ControlsContainer/>
     </div>
-    <ControlsContainer/>
-  </div>
-)
+  )
+}
 
 export default App

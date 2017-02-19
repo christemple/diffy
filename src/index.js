@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux'
 import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
 import diffyApp from './reducers'
-import App from './components/App'
+import AppContainer from './containers/AppContainer'
 import createLogger from 'redux-logger';
 
 let store = createStore(
@@ -19,7 +19,7 @@ let store = createStore(
 
 render(
   <Provider store={store}>
-    <App/>
+    <AppContainer/>
   </Provider>,
   document.getElementById('root')
 )
